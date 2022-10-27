@@ -1,16 +1,40 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Open Sans"
+  font-weight: 300
+
+body
+  height: 100%
+  max-width: 90%
+  margin: 0 auto
+
 #countries
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-gap: 30px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: stretch
 
 .country
   border: 1px solid goldenrod
-  border-radius: 20px
-  padding: 20px
   text-align: center
   width: 300px
+  height: 200px
 
 
+  & img
+  position: relative
+  height: 200px
+  width: 300px
+  perspective: 1000px
 
-#countryDetail img
-  width: 200px
+  & img:hover
+    transform-style: preserve-3d
+    transform: rotateY(180deg)
+    transition: transform 2s
+    backface-visibility: hidden
+  
+  
+    
+
